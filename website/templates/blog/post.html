@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Codin Nerds Blog {% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="notification">
+            <img class="featured_image" src="{{post.thumbnail.url}}">
+
+            <h1>{{ post.headline }}</h1>
+
+            <h4>{{ post.sub_headline }} by {{ post.author }} on {{post.created}}</h4>
+
+            <p>{{ post.body | linebreaks }}</p>
+        </div>
+    </div>
+{% endblock content %}

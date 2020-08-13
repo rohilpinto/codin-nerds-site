@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} Codin Nerds Blog {% endblock title %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="max-w-sm w-full lg:max-w-full lg:flex">
+            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+                style="background-image: url('{{ post.thumbnail.url }}')">
+            </div>
+            <div
+                class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                <div class="mb-8">
+                    {% for tag in post.tags.all %}
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">{{ tag }}</span>
+                    {% endfor %}
+
+
+                    <div class="text-gray-900 font-bold text-xl mb-2">{{ post.headline }}</div>
+                    <p class="text-gray-700 text-base">{{ post.sub_headline }}</p>
+                </div>
+                <a href="{% url 'blog-post' post.id %}">Read More!</a>
+                <div class="flex items-center">
+                    <div class="text-sm">
+                        <p class="text-gray-900 leading-none">{{ post.author }}</p>
+                        <p class="text-gray-600">{{ post.created }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endblock content %}
