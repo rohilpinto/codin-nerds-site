@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pre-commit = "*"
+flake8 = "*"
+
+[packages]
+django = "*"
+django-admin-honeypot = "*"
+django-admin-interface = "*"
+
+[scripts]
+start = "python manage.py runserver"
+lint = "pre-commit run --all-files"
+precommit = "pre-commit install"
+
+[requires]
+python_version = "3.8"
