@@ -2,7 +2,7 @@
 
 <nav class="navbar is-transparent is-info" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item" href="{% url 'site-home' %}">
             <img src="{% static 'images/codin-logo-smaller.png' %}" width="112">
         </a>
 
@@ -15,17 +15,35 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a class="navbar-item">
+            <a href="{% url 'site-about' %}" class="navbar-item">
                 About
             </a>
 
-            <a class="navbar-item">
-                Community
+            <a href="{% url 'blog-main' %}" class="navbar-item">
+                Blog
             </a>
 
             <a class="navbar-item">
-                Resources
+                Our Community
             </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Materials
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a href="{% url 'coding-resources' %}" class="navbar-item">
+                        Resources
+                    </a>
+                    <a href="{% url 'coding-tools' %}" class="navbar-item">
+                        Tools
+                    </a>
+                    <a href="{% url 'coding-help' %}" class="navbar-item">
+                        Helping Resources
+                    </a>
+                </div>
+            </div>
 
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
@@ -38,9 +56,6 @@
                     </a>
                     <a class="navbar-item">
                         Online Contests
-                    </a>
-                    <a class="navbar-item">
-                        Tools and Help
                     </a>
 
                     <hr class="navbar-divider">

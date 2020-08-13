@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'admin_honeypot',
 
     'base.apps.BaseConfig',
+    'blog.apps.BlogConfig',
+    'materials.apps.MaterialsConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
