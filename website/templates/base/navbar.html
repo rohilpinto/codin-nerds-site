@@ -1,22 +1,68 @@
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'css/main_navbar.css' %}">
+<nav class="navbar is-transparent is-info" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+            <img src="{% static 'images/codin-logo-smaller.png' %}" width="112">
+        </a>
 
-<div class="outer-menu">
-  <input class="checkbox-toggle" type="checkbox" />
-  <div class="hamburger">
-    <div></div>
-  </div>
-  <div class="menu">
-    <div>
-      <div>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
     </div>
-  </div>
-</div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                About
+            </a>
+
+            <a class="navbar-item">
+                Community
+            </a>
+
+            <a class="navbar-item">
+                Resources
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Events
+                    </a>
+                    <a class="navbar-item">
+                        Online Contests
+                    </a>
+                    <a class="navbar-item">
+                        Tools and Help
+                    </a>
+
+                    <hr class="navbar-divider">
+
+                    <a class="navbar-item">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-info">
+                        Log in
+                    </a>
+                    <a class="button is-primary">
+                        <strong>Sign up</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
