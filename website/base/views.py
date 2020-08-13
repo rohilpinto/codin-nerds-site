@@ -1,10 +1,11 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def home(request):
-    return HttpResponse('<h1>Welcome to Codin\' Nerds Official Website!</h1>')
+    context = {}
+    return render(request, 'base/index.html', context)
 
 
 def about(request):
-    return HttpResponse('<h1>About Codin\' Nerds</h1>')
+    context = {}
+    return render(request, 'base/about.html', context)
