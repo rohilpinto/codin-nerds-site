@@ -11,6 +11,7 @@ flake8 = "*"
 django = "*"
 django-admin-honeypot = "*"
 django-admin-interface = "*"
+pillow = "*"
 
 [scripts]
 start = "python manage.py runserver"
