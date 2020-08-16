@@ -23,7 +23,7 @@ def post(request, pk):
     return render(request, 'blog/post.html', context)
 
 
-@login_required(login_url="login")
+@login_required(login_url="account_login")
 def create_post(request):
     form = PostForm()
 

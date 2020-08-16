@@ -22,8 +22,9 @@ urlpatterns = [
     path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('sudo/', admin.site.urls),
 
+    path('accounts/', include('allauth.urls')),
+
     path('', include('base.urls')),
-    path('', include('users.urls')),
     path('blog/', include('blog.urls')),
     path('materials/', include('materials.urls')),
 

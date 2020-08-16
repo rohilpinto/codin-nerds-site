@@ -12,6 +12,9 @@ django = "*"
 django-admin-honeypot = "*"
 django-admin-interface = "*"
 pillow = "*"
+requests = "*"
+requests-oauthlib = "*"
+django-allauth = "*"
 
 [scripts]
 start = "python manage.py runserver"
